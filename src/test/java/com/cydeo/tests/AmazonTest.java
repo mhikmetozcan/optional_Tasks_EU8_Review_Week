@@ -3,6 +3,7 @@ package com.cydeo.tests;
 import com.cydeo.utils.ConfigurationReader;
 import com.cydeo.utils.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
@@ -27,6 +28,7 @@ public class AmazonTest {
         driver.get("https://www.amazon.com");
 
         WebElement amazonSearchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+        amazonSearchBox.sendKeys(ConfigurationReader.getProperty("searchText" + Keys.ENTER));
 
 
     }
