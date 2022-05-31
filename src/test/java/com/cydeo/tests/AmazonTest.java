@@ -33,6 +33,9 @@ public class AmazonTest {
         WebElement hat = driver.findElement(By.xpath("//span[.='EINSKEY Sun Hat for Men/Women, Waterproof Wide Birm Bucket Hat UV Protection Boonie Hat for Fishing Hiking Garden Beach']"));
         hat.click();
 
+        WebElement quantityDropDown = driver.findElement(By.xpath("//span[@class='a-button-text a-declarative']//span[@class='a-dropdown-label']"));
+        quantityDropDown.click();
+
 
     }
 
