@@ -28,7 +28,10 @@ public class AmazonTest {
         driver.get("https://www.amazon.com");
 
         WebElement amazonSearchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
-        amazonSearchBox.sendKeys(ConfigurationReader.getProperty("searchText" + Keys.ENTER));
+        amazonSearchBox.sendKeys(ConfigurationReader.getProperty("searchText") + Keys.ENTER);
+
+        WebElement hat = driver.findElement(By.xpath("//span[.='EINSKEY Sun Hat for Men/Women, Waterproof Wide Birm Bucket Hat UV Protection Boonie Hat for Fishing Hiking Garden Beach']"));
+        hat.click();
 
 
     }
