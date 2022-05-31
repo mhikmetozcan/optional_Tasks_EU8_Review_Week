@@ -2,7 +2,9 @@ package com.cydeo.tests;
 
 import com.cydeo.utils.ConfigurationReader;
 import com.cydeo.utils.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,5 +26,8 @@ public class AmazonTest {
     public void getToAmazonDotCom(){
         driver.get("https://www.amazon.com");
     }
+
+    WebElement amazonSearcBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+
 
 }
