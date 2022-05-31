@@ -36,6 +36,12 @@ public class AmazonTest {
         WebElement quantityDropDown = driver.findElement(By.xpath("//span[@class='a-button-text a-declarative']//span[@class='a-dropdown-label']"));
         quantityDropDown.click();
 
+        WebElement quantity2 = driver.findElement(By.xpath("//a[@tabindex='-1'][@id='quantity_1']"));
+        quantity2.click();
+
+        WebElement addToCart = driver.findElement(By.xpath("//input[@id='add-to-cart-button']"));
+        addToCart.click();
+
 
     }
 
